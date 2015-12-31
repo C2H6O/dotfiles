@@ -1,0 +1,19 @@
+# example config (see "hg help config" for more info)
+
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+username = Alexandre Doubov <alexandre.doubov@gmail.com>
+
+[extdiff]
+cmd.kdiff3 = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+
+[merge-tools]
+kdiff3.args = $base $local $other -o $output
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see "hg help extensions" for more info)
+# pager =
+# progress =
+# color =
