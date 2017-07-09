@@ -24,7 +24,6 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'elzr/vim-json'
-Plugin 'wimstefan/Lightning' " colorscheme
 
 "
 " " The following are examples of different formats supported.
@@ -86,7 +85,6 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-colorscheme lightning
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
