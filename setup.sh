@@ -5,15 +5,18 @@ if [ ! -d ~/.vim/bundle ]; then
 	echo "Done cloning the repo"
 fi
 
+# if the user doesn't have a .vimrc file yet in the home folder, then link the vimrc file from this repo to ~/.vimrc file
 if [ ! -f ~/.vimrc ]; then
 	echo "Creating a symbolic link to the vimrc file of this repo to ~/.vimrc"
+	# get this script's absolute path
 	SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 	VIMRC_PATH=$SCRIPT_DIR"/vimrc"
 	echo "VIMRC_PATH=$VIMRC_PATH"
 	ln -s $VIMRC_PATH ~/.vimrc
-	vim +PluginInstall +qall
 fi
 
+# install all the missing Vundle plugins
+vim +PluginInstall +qall
 
 
 
